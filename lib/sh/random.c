@@ -23,12 +23,9 @@
 #include "bashtypes.h"
 
 /* Robust header inclusion for random number generation support */
-#if defined (HAVE_SYS_RANDOM_H)
+#if defined (HAVE_SYS_RANDOM_H) && !defined(__FREESTANDING__)
 #  include <sys/random.h>
 #  define HAVE_GETRANDOM 1
-#elif !defined(__FREESTANDING__)
-#  /* Try to include sys/random.h anyway on non-freestanding systems */
-#  include <sys/random.h>
 #endif
 
 #if defined (HAVE_UNISTD_H)
