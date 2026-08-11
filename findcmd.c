@@ -145,7 +145,7 @@ file_status (const char *name)
      but we don't want any special treatment for /dev/fd. */
   if (exec_name_should_ignore (name) == 0 && access (name, X_OK) == 0)
     r |= FS_EXECABLE;
-  if (eaccess (name, R_OK) == 0)
+  if (access (name, R_OK) == 0)
     r |= FS_READABLE;
 
   return r;
