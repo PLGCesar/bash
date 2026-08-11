@@ -24,7 +24,7 @@
 #  include <unistd.h>
 #endif
 #include <bashtypes.h>
-
+#include <sys/memfd.h>
 #if defined (HAVE_MEMFD_CREATE) || defined (HAVE_SHM_MKSTEMP)
 #  include <sys/mman.h>
 #endif
