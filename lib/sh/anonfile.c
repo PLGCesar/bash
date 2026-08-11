@@ -76,16 +76,16 @@ anonopen (const char *name, int flags, char **fn)
 
 /*
  #if defined (HAVE_MEMFD_CREATE)
- /* "Names do not affect the behavior of the file descriptor." */
- /* fd = memfd_create ("anonopen", MFD_NOEXEC_SEAL);
- if (fd >= 0)
-   {
-     if (fn)
-       *fn = 0;
-     return fd;
-   }
- /* If memfd_create fails, we fall through to the unlinked-shm-or-regular-file
-    implementation. */
+ // "Names do not affect the behavior of the file descriptor."
+ // fd = memfd_create ("anonopen", MFD_NOEXEC_SEAL);
+ // if (fd >= 0)
+ //   {
+ //     if (fn)
+ //       *fn = 0;
+ //     return fd;
+ //   }
+ // If memfd_create fails, we fall through to the unlinked-shm-or-regular-file
+ // implementation.
  #endif
 */
 
