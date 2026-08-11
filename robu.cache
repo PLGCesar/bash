@@ -70,9 +70,9 @@ ac_cv_func_chown_works=${ac_cv_func_chown_works=yes}
 ac_cv_func_clock_gettime=${ac_cv_func_clock_gettime=yes}
 ac_cv_func_confstr=${ac_cv_func_confstr=yes}
 ac_cv_func_dcgettext=${ac_cv_func_dcgettext=yes}
-ac_cv_func_dlclose=${ac_cv_func_dlclose=yes}
-ac_cv_func_dlopen=${ac_cv_func_dlopen=yes}
-ac_cv_func_dlsym=${ac_cv_func_dlsym=yes}
+ac_cv_func_dlclose=${ac_cv_func_dlclose=no}
+ac_cv_func_dlopen=${ac_cv_func_dlopen=no}
+ac_cv_func_dlsym=${ac_cv_func_dlsym=no}
 ac_cv_func_dprintf=${ac_cv_func_dprintf=yes}
 ac_cv_func_dup2=${ac_cv_func_dup2=yes}
 ac_cv_func_eaccess=${ac_cv_func_eaccess=no}
@@ -317,7 +317,7 @@ ac_cv_header_wchar_h=${ac_cv_header_wchar_h=yes}
 ac_cv_header_wctype_h=${ac_cv_header_wctype_h=yes}
 ac_cv_header_xlocale_h=${ac_cv_header_xlocale_h=no}
 ac_cv_host=${ac_cv_host=x86_64-pc-linux-gnu}
-ac_cv_lib_dl_dlopen=${ac_cv_lib_dl_dlopen=yes}
+ac_cv_lib_dl_dlopen=${ac_cv_lib_dl_dlopen=no}
 ac_cv_lib_pthread_pthread_kill=${ac_cv_lib_pthread_pthread_kill=yes}
 ac_cv_member_struct_dirent_d_fileno=${ac_cv_member_struct_dirent_d_fileno=yes}
 ac_cv_member_struct_dirent_d_ino=${ac_cv_member_struct_dirent_d_ino=yes}
@@ -347,6 +347,10 @@ ac_cv_prog_cc_c11=${ac_cv_prog_cc_c11=}
 ac_cv_prog_cc_g=${ac_cv_prog_cc_g=yes}
 ac_cv_prog_cc_stdc=${ac_cv_prog_cc_stdc=}
 ac_cv_prog_make_make_set=${ac_cv_prog_make_make_set=yes}
+ac_cv_rl_includedir=${ac_cv_rl_includedir=/work/build/readline-prefix/include}
+ac_cv_rl_libdir=${ac_cv_rl_libdir=/work/build/readline-prefix/lib}
+ac_cv_rl_prefix=${ac_cv_rl_prefix=/work/build/readline-prefix}
+ac_cv_rl_version=${ac_cv_rl_version=8.0}
 ac_cv_safe_to_define___extensions__=${ac_cv_safe_to_define___extensions__=yes}
 ac_cv_search_opendir=${ac_cv_search_opendir='none required'}
 ac_cv_should_define__xopen_source=${ac_cv_should_define__xopen_source=no}
@@ -433,7 +437,7 @@ bash_cv_func_strchrnul_works=${bash_cv_func_strchrnul_works=yes}
 bash_cv_func_strcoll_broken=${bash_cv_func_strcoll_broken=no}
 bash_cv_func_vsnprintf=${bash_cv_func_vsnprintf=yes}
 bash_cv_getcwd_malloc=${bash_cv_getcwd_malloc=yes}
-bash_cv_getenv_redef=${bash_cv_getenv_redef=yes}
+bash_cv_getenv_redef=${bash_cv_getenv_redef=no}
 bash_cv_getpw_declared=${bash_cv_getpw_declared=yes}
 bash_cv_have_gethostbyname=${bash_cv_have_gethostbyname=no}
 bash_cv_have_libnsl=${bash_cv_have_libnsl=no}
